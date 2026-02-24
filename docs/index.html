@@ -33,6 +33,11 @@ function _createMdxContent(props) {
       children: ["\n", _jsx(_components.li, {
         children: "Despliegue de primera página."
       }), "\n"]
+    }), "\n", _jsx("div", {
+      className: "p-10 bg-red-500",
+      children: _jsx(_components.p, {
+        children: "Desde JSX."
+      })
     })]
   });
 }
