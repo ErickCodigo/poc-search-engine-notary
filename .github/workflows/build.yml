@@ -17,6 +17,8 @@ jobs:
 
       - name: Clonar repositorio
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.PAT_TOKEN_POC_NOTARY_SECRET }}
 
       - name: Configurar Node.js
         uses: actions/setup-node@v4
@@ -41,5 +43,3 @@ jobs:
           git add docs/index.html
           git diff --staged --quiet || git commit -m "chore: actualizar index.html generado"
           git push
-        env:
-          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN_POC_NOTARY_SECRET }}
