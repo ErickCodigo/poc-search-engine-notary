@@ -1,32 +1,27 @@
-import { compile } from '@mdx-js/mdx'
-import { readFile, writeFile, mkdir } from 'fs/promises'
-import { join } from 'path'
+import {mkdir, readFile, writeFile} from 'fs/promises'
+import {join} from 'path'
+import {unified} from "unified";
+import remarkParse from "remark-parse";
+import remarkRehype from "remark-rehype";
+import rehypeStringify from "rehype-stringify";
+import rehypeDocument from "rehype-document";
 
 const mdxContent = await readFile('src/index.mdx', 'utf-8')
 
-const compiled = await compile(mdxContent, {
-    outputFormat: 'function-body'
-})
+const now = new Date();
+const datePart = now.toLocaleDateString('en-GB');
+const timePart = now.toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'});
 
-const html = `<!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mi página</title>
-  </head>
-  <body>
-    <div id="root">
-      <!-- Contenido generado desde MDX -->
-      <p>Archivo generado automáticamente.</p>
-    </div>
-    <script type="module">
-      ${compiled.value}
-    </script>
-  </body>
-</html>`
+const formattedDateTime = `${datePart} ${timePart}`;
 
-await mkdir('docs', { recursive: true })
-await writeFile(join('docs', 'index.html'), html, 'utf-8')
+const file = await unified()
+    .use(remarkParse)
+    .use(remarkRehype)
+    .use(rehypeDocument, {title: `Actualizaste el ${formattedDateTime}`})
+    .use(rehypeStringify)
+    .process(mdxContent)
+
+await mkdir('docs', {recursive: true})
+await writeFile(join('docs', 'index.html'), String(file), 'utf-8')
 
 console.log('✅ index.html generado en /docs')
