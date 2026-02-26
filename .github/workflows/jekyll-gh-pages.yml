@@ -37,7 +37,7 @@ jobs:
           sparse-checkout-cone-mode: false
       - name: Archive artifact (Unix - Tape Archive)
         run: |
-          tar -azf artifact.tar.gz -C docs/ .
+          tar -czf artifact.tar.gz -C docs/ .
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
