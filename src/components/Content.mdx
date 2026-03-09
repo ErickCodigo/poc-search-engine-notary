@@ -1,18 +1,20 @@
-<div className="max-w-3xl mx-auto px-6 py-10 space-y-10">
+<div className="max-w-2xl mx-auto px-8 py-12 space-y-12">
 
     {/* ── HERO ── */}
-    <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900 via-slate-800 to-amber-950 px-8 py-16 shadow-2xl">
+    <div className="relative overflow-hidden rounded-2xl bg-linear-to-br from-slate-900 via-indigo-950 to-amber-950 px-10 py-16 shadow-2xl">
         <div className="absolute inset-0 opacity-10"
              style={{backgroundImage: "repeating-linear-gradient(45deg, #d4a853 0, #d4a853 1px, transparent 0, transparent 50%)", backgroundSize: "20px 20px"}} />
+        <div className="absolute top-0 right-0 w-64 h-64 bg-amber-500 opacity-10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3" />
+        <div className="absolute bottom-0 left-0 w-48 h-48 bg-indigo-500 opacity-15 rounded-full blur-2xl translate-y-1/3 -translate-x-1/4" />
         <div className="relative z-10">
-    <span className="inline-block text-xs font-semibold tracking-[0.3em] uppercase text-amber-400 mb-4 border border-amber-400/40 px-3 py-1 rounded-full">
+    <span className="inline-block text-xs font-semibold tracking-[0.3em] uppercase text-amber-400 mb-5 border border-amber-400/40 px-3 py-1 rounded-full bg-amber-400/10">
       Documentación Oficial
     </span>
-            <h1 className="text-4xl md:text-5xl font-serif font-bold text-white leading-tight mb-6">
+            <h1 className="text-4xl md:text-5xl font-serif font-bold text-white leading-tight mb-5">
                 Procesos Notariales <br />
                 <span className="text-amber-400">Documentados</span>
             </h1>
-            <p className="text-slate-300 text-lg leading-relaxed">
+            <p className="text-slate-300 text-base leading-relaxed">
                 Una guía estructurada y confiable para comprender, preparar y ejecutar
                 los procedimientos notariales más comunes en el Perú. Cada proceso,
                 explicado paso a paso con requisitos claros y formularios descargables.
@@ -24,35 +26,35 @@
 
     ## ¿Qué encontrarás aquí?
 
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div className="group rounded-xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-md hover:border-amber-300 transition-all duration-200">
-            <div className="w-10 h-10 rounded-lg bg-amber-50 flex items-center justify-center mb-4">
-                <span className="text-xl">📋</span>
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div className="rounded-xl border border-blue-100 bg-linear-to-b from-blue-50 to-white p-6 shadow-sm hover:shadow-md hover:border-blue-300 transition-all duration-200">
+            <div className="w-10 h-10 rounded-lg bg-blue-500 flex items-center justify-center mb-4 shadow-sm">
+                <span className="text-lg">📋</span>
             </div>
-            <h3 className="font-semibold text-slate-800 text-base mb-2">Guías paso a paso</h3>
-            <p className="text-slate-500 text-sm leading-relaxed">
+            <h3 className="font-semibold text-blue-900 text-base mb-2">Guías paso a paso</h3>
+            <p className="text-blue-700/70 text-sm leading-relaxed">
                 Instrucciones detalladas para cada trámite: desde la preparación de documentos
                 hasta la firma y legalización final.
             </p>
         </div>
 
-        <div className="group rounded-xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-md hover:border-amber-300 transition-all duration-200">
-            <div className="w-10 h-10 rounded-lg bg-amber-50 flex items-center justify-center mb-4">
-                <span className="text-xl">📁</span>
+        <div className="rounded-xl border border-violet-100 bg-linear-to-b from-violet-50 to-white p-6 shadow-sm hover:shadow-md hover:border-violet-300 transition-all duration-200">
+            <div className="w-10 h-10 rounded-lg bg-violet-500 flex items-center justify-center mb-4 shadow-sm">
+                <span className="text-lg">📁</span>
             </div>
-            <h3 className="font-semibold text-slate-800 text-base mb-2">Requisitos y formularios</h3>
-            <p className="text-slate-500 text-sm leading-relaxed">
+            <h3 className="font-semibold text-violet-900 text-base mb-2">Requisitos y formularios</h3>
+            <p className="text-violet-700/70 text-sm leading-relaxed">
                 Listados actualizados de documentos necesarios y acceso directo a los
                 formularios requeridos por cada notaría o entidad competente.
             </p>
         </div>
 
-        <div className="group rounded-xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-md hover:border-amber-300 transition-all duration-200">
-            <div className="w-10 h-10 rounded-lg bg-amber-50 flex items-center justify-center mb-4">
-                <span className="text-xl">⚖️</span>
+        <div className="rounded-xl border border-amber-100 bg-linear-to-b from-amber-50 to-white p-6 shadow-sm hover:shadow-md hover:border-amber-300 transition-all duration-200">
+            <div className="w-10 h-10 rounded-lg bg-amber-500 flex items-center justify-center mb-4 shadow-sm">
+                <span className="text-lg">⚖️</span>
             </div>
-            <h3 className="font-semibold text-slate-800 text-base mb-2">Marco legal vigente</h3>
-            <p className="text-slate-500 text-sm leading-relaxed">
+            <h3 className="font-semibold text-amber-900 text-base mb-2">Marco legal vigente</h3>
+            <p className="text-amber-700/70 text-sm leading-relaxed">
                 Referencias directas al Decreto Legislativo N.° 1049 y la normativa notarial
                 peruana, con actualizaciones periódicas.
             </p>
@@ -66,42 +68,42 @@
     Los procedimientos están organizados por categoría para facilitar la navegación:
 
     <div className="space-y-3">
-        <details className="group rounded-lg border border-slate-200 overflow-hidden">
-            <summary className="flex items-center justify-between px-5 py-4 cursor-pointer bg-slate-50 hover:bg-amber-50 transition-colors font-medium text-slate-700 list-none">
+        <details className="group rounded-xl border border-emerald-200 overflow-hidden bg-linear-to-r from-emerald-50 to-white">
+            <summary className="flex items-center justify-between px-5 py-4 cursor-pointer hover:bg-emerald-50 transition-colors font-medium text-emerald-900 list-none">
                 <span>🏠 Actos sobre bienes inmuebles</span>
-                <span className="text-slate-400 group-open:rotate-180 transition-transform text-sm">▼</span>
+                <span className="text-emerald-400 group-open:rotate-180 transition-transform text-sm">▼</span>
             </summary>
-            <div className="px-5 py-4 text-sm text-slate-600 leading-relaxed border-t border-slate-100 bg-white">
+            <div className="px-5 py-4 text-sm text-emerald-800/80 leading-relaxed border-t border-emerald-100 bg-white">
                 Compraventa, donación, hipoteca, anticipo de legítima, usufructo y transferencia de propiedad.
             </div>
         </details>
 
-        <details className="group rounded-lg border border-slate-200 overflow-hidden">
-            <summary className="flex items-center justify-between px-5 py-4 cursor-pointer bg-slate-50 hover:bg-amber-50 transition-colors font-medium text-slate-700 list-none">
+        <details className="group rounded-xl border border-rose-200 overflow-hidden bg-linear-to-r from-rose-50 to-white">
+            <summary className="flex items-center justify-between px-5 py-4 cursor-pointer hover:bg-rose-50 transition-colors font-medium text-rose-900 list-none">
                 <span>👨‍👩‍👧 Actos de familia y sucesiones</span>
-                <span className="text-slate-400 group-open:rotate-180 transition-transform text-sm">▼</span>
+                <span className="text-rose-400 group-open:rotate-180 transition-transform text-sm">▼</span>
             </summary>
-            <div className="px-5 py-4 text-sm text-slate-600 leading-relaxed border-t border-slate-100 bg-white">
+            <div className="px-5 py-4 text-sm text-rose-800/80 leading-relaxed border-t border-rose-100 bg-white">
                 Testamentos, declaratoria de herederos, poderes notariales, separación convencional y divorcio ulterior.
             </div>
         </details>
 
-        <details className="group rounded-lg border border-slate-200 overflow-hidden">
-            <summary className="flex items-center justify-between px-5 py-4 cursor-pointer bg-slate-50 hover:bg-amber-50 transition-colors font-medium text-slate-700 list-none">
+        <details className="group rounded-xl border border-sky-200 overflow-hidden bg-linear-to-r from-sky-50 to-white">
+            <summary className="flex items-center justify-between px-5 py-4 cursor-pointer hover:bg-sky-50 transition-colors font-medium text-sky-900 list-none">
                 <span>🏢 Actos societarios y empresariales</span>
-                <span className="text-slate-400 group-open:rotate-180 transition-transform text-sm">▼</span>
+                <span className="text-sky-400 group-open:rotate-180 transition-transform text-sm">▼</span>
             </summary>
-            <div className="px-5 py-4 text-sm text-slate-600 leading-relaxed border-t border-slate-100 bg-white">
+            <div className="px-5 py-4 text-sm text-sky-800/80 leading-relaxed border-t border-sky-100 bg-white">
                 Constitución de sociedades, modificación de estatutos, poderes para actos empresariales y disolución.
             </div>
         </details>
 
-        <details className="group rounded-lg border border-slate-200 overflow-hidden">
-            <summary className="flex items-center justify-between px-5 py-4 cursor-pointer bg-slate-50 hover:bg-amber-50 transition-colors font-medium text-slate-700 list-none">
+        <details className="group rounded-xl border border-violet-200 overflow-hidden bg-linear-to-r from-violet-50 to-white">
+            <summary className="flex items-center justify-between px-5 py-4 cursor-pointer hover:bg-violet-50 transition-colors font-medium text-violet-900 list-none">
                 <span>✍️ Certificaciones y autenticaciones</span>
-                <span className="text-slate-400 group-open:rotate-180 transition-transform text-sm">▼</span>
+                <span className="text-violet-400 group-open:rotate-180 transition-transform text-sm">▼</span>
             </summary>
-            <div className="px-5 py-4 text-sm text-slate-600 leading-relaxed border-t border-slate-100 bg-white">
+            <div className="px-5 py-4 text-sm text-violet-800/80 leading-relaxed border-t border-violet-100 bg-white">
                 Legalización de firmas, certificación de copias, constatación de supervivencia y autenticación para uso en el extranjero (apostilla).
             </div>
         </details>
@@ -111,24 +113,46 @@
 
     ## Cómo usar esta documentación
 
-    > **Nota:** Esta guía es de carácter informativo y orientativo. Para casos con implicancias legales específicas, siempre consulta directamente con un notario público colegiado.
+    <div className="rounded-xl border border-indigo-200 bg-indigo-50 px-5 py-4 text-sm text-indigo-800 leading-relaxed">
+        💡 <strong>Nota:</strong> Esta guía es de carácter informativo y orientativo. Para casos con implicancias legales específicas, siempre consulta directamente con un notario público colegiado.
+    </div>
 
     Cada sección de proceso sigue una estructura consistente:
 
-    1. **Descripción del acto** — qué es y cuándo se necesita
-    2. **Base legal** — norma que lo regula
-    3. **Requisitos documentales** — lista descargable
-    4. **Flujo del procedimiento** — diagrama y pasos ordenados
-    5. **Costos estimados y plazos** — rangos referenciales
-    6. **Preguntas frecuentes** — casos de duda comunes
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <div className="flex items-start gap-3 rounded-lg bg-slate-50 border border-slate-200 px-4 py-3">
+            <span className="text-amber-500 font-bold text-sm mt-0.5">01</span>
+            <div><strong className="text-slate-700 text-sm">Descripción del acto</strong><p className="text-slate-500 text-xs mt-0.5">Qué es y cuándo se necesita</p></div>
+        </div>
+        <div className="flex items-start gap-3 rounded-lg bg-slate-50 border border-slate-200 px-4 py-3">
+            <span className="text-emerald-500 font-bold text-sm mt-0.5">02</span>
+            <div><strong className="text-slate-700 text-sm">Base legal</strong><p className="text-slate-500 text-xs mt-0.5">Norma que lo regula</p></div>
+        </div>
+        <div className="flex items-start gap-3 rounded-lg bg-slate-50 border border-slate-200 px-4 py-3">
+            <span className="text-blue-500 font-bold text-sm mt-0.5">03</span>
+            <div><strong className="text-slate-700 text-sm">Requisitos documentales</strong><p className="text-slate-500 text-xs mt-0.5">Lista descargable</p></div>
+        </div>
+        <div className="flex items-start gap-3 rounded-lg bg-slate-50 border border-slate-200 px-4 py-3">
+            <span className="text-violet-500 font-bold text-sm mt-0.5">04</span>
+            <div><strong className="text-slate-700 text-sm">Flujo del procedimiento</strong><p className="text-slate-500 text-xs mt-0.5">Diagrama y pasos ordenados</p></div>
+        </div>
+        <div className="flex items-start gap-3 rounded-lg bg-slate-50 border border-slate-200 px-4 py-3">
+            <span className="text-rose-500 font-bold text-sm mt-0.5">05</span>
+            <div><strong className="text-slate-700 text-sm">Costos estimados y plazos</strong><p className="text-slate-500 text-xs mt-0.5">Rangos referenciales</p></div>
+        </div>
+        <div className="flex items-start gap-3 rounded-lg bg-slate-50 border border-slate-200 px-4 py-3">
+            <span className="text-sky-500 font-bold text-sm mt-0.5">06</span>
+            <div><strong className="text-slate-700 text-sm">Preguntas frecuentes</strong><p className="text-slate-500 text-xs mt-0.5">Casos de duda comunes</p></div>
+        </div>
+    </div>
 
-    <div className="flex flex-col sm:flex-row gap-4 pt-2">
+    <div className="flex flex-col sm:flex-row gap-3 pt-2">
         <a href="/procesos"
            className="inline-flex items-center justify-center gap-2 rounded-lg bg-amber-500 hover:bg-amber-600 text-white font-semibold px-6 py-3 text-sm transition-colors shadow-sm no-underline">
             Ver todos los procesos →
         </a>
         <a href="/glosario"
-           className="inline-flex items-center justify-center gap-2 rounded-lg border border-slate-300 hover:border-amber-400 text-slate-700 hover:text-amber-700 font-semibold px-6 py-3 text-sm transition-colors no-underline">
+           className="inline-flex items-center justify-center gap-2 rounded-lg border border-slate-300 hover:border-indigo-400 text-slate-700 hover:text-indigo-700 font-semibold px-6 py-3 text-sm transition-colors no-underline">
             Glosario notarial
         </a>
     </div>
