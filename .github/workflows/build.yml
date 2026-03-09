@@ -38,10 +38,17 @@ jobs:
 
       - name: Publicar cambios en /docs
         run: |
-          set -x
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add docs/index.html
           git add docs/scripts/vendor.js
           git add docs/scripts/app.js
-          git diff --staged --quiet; CHANGED=$?; [ $CHANGED -eq 1 ] && (git commit -m "chore: actualizar index.html generado" && git push) > /dev/null; echo $CHANGED
+          set +e  # Desactiva la detención automática por errores
+          git diff --staged --quiet
+          CHANGED=$?
+          set -e  # La reactiva para el resto del script
+          if [ $STATUS -eq 1 ]; then
+            git commit -m "chore: actualizar index.html generado"
+            git push
+          fi
+          echo "Status $CHANGED"
