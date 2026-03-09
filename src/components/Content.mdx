@@ -1,15 +1,139 @@
-# Sitio de Pequeño Buscador de conceptos de notarias.
+# Bienvenido al Portal de Procesos Notariales
 
-Proyecto personal de rssumen y redacción de información
+<div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900 via-slate-800 to-amber-950 px-8 py-16 mb-12 shadow-2xl">
+    <div className="absolute inset-0 opacity-10"
+         style={{backgroundImage: "repeating-linear-gradient(45deg, #d4a853 0, #d4a853 1px, transparent 0, transparent 50%)", backgroundSize: "20px 20px"}} />
+    <div className="relative z-10 max-w-3xl">
+    <span className="inline-block text-xs font-semibold tracking-[0.3em] uppercase text-amber-400 mb-4 border border-amber-400/40 px-3 py-1 rounded-full">
+      Documentación Oficial
+    </span>
+        <h1 className="text-4xl md:text-5xl font-serif font-bold text-white leading-tight mb-6">
+            Procesos Notariales <br />
+            <span className="text-amber-400">Documentados</span>
+        </h1>
+        <p className="text-slate-300 text-lg leading-relaxed max-w-2xl">
+            Una guía estructurada y confiable para comprender, preparar y ejecutar
+            los procedimientos notariales más comunes en el Perú. Cada proceso,
+            explicado paso a paso con requisitos claros y formularios descargables.
+        </p>
+    </div>
+</div>
 
-## Proximamente:
-- Despliegue de primera página.
-- Despliegue de estáticos por workflow.
-    - Configurar workflow de jekyll para generar html desde mdx.
-    - Crear personal access token (PAT) y vincularlo a primer workflow de build.
-    - Lograr activar el segundo workflow mediante PAT.
-    - Separar responsabilidades por workflow (build y deploy).
+---
 
-<div className="p-10 bg-red-500">
-    Desde React.
+## ¿Qué encontrarás aquí?
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-10">
+    <div className="group rounded-xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-md hover:border-amber-300 transition-all duration-200">
+        <div className="w-10 h-10 rounded-lg bg-amber-50 flex items-center justify-center mb-4">
+            <span className="text-xl">📋</span>
+        </div>
+        <h3 className="font-semibold text-slate-800 text-base mb-2">Guías paso a paso</h3>
+        <p className="text-slate-500 text-sm leading-relaxed">
+            Instrucciones detalladas para cada trámite: desde la preparación de documentos
+            hasta la firma y legalización final.
+        </p>
+    </div>
+
+    <div className="group rounded-xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-md hover:border-amber-300 transition-all duration-200">
+        <div className="w-10 h-10 rounded-lg bg-amber-50 flex items-center justify-center mb-4">
+            <span className="text-xl">📁</span>
+        </div>
+        <h3 className="font-semibold text-slate-800 text-base mb-2">Requisitos y formularios</h3>
+        <p className="text-slate-500 text-sm leading-relaxed">
+            Listados actualizados de documentos necesarios y acceso directo a los
+            formularios requeridos por cada notaría o entidad competente.
+        </p>
+    </div>
+
+    <div className="group rounded-xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-md hover:border-amber-300 transition-all duration-200">
+        <div className="w-10 h-10 rounded-lg bg-amber-50 flex items-center justify-center mb-4">
+            <span className="text-xl">⚖️</span>
+        </div>
+        <h3 className="font-semibold text-slate-800 text-base mb-2">Marco legal vigente</h3>
+        <p className="text-slate-500 text-sm leading-relaxed">
+            Referencias directas al Decreto Legislativo N.° 1049 y la normativa notarial
+            peruana, con actualizaciones periódicas.
+        </p>
+    </div>
+</div>
+
+---
+
+## Procesos disponibles
+
+Los procedimientos están organizados por categoría para facilitar la navegación:
+
+<div className="space-y-3 my-8">
+    <details className="group rounded-lg border border-slate-200 overflow-hidden">
+        <summary className="flex items-center justify-between px-5 py-4 cursor-pointer bg-slate-50 hover:bg-amber-50 transition-colors font-medium text-slate-700 list-none">
+            <span>🏠 Actos sobre bienes inmuebles</span>
+            <span className="text-slate-400 group-open:rotate-180 transition-transform text-sm">▼</span>
+        </summary>
+        <div className="px-5 py-4 text-sm text-slate-600 leading-relaxed border-t border-slate-100 bg-white">
+            Compraventa, donación, hipoteca, anticipo de legítima, usufructo y transferencia de propiedad.
+        </div>
+    </details>
+
+    <details className="group rounded-lg border border-slate-200 overflow-hidden">
+        <summary className="flex items-center justify-between px-5 py-4 cursor-pointer bg-slate-50 hover:bg-amber-50 transition-colors font-medium text-slate-700 list-none">
+            <span>👨‍👩‍👧 Actos de familia y sucesiones</span>
+            <span className="text-slate-400 group-open:rotate-180 transition-transform text-sm">▼</span>
+        </summary>
+        <div className="px-5 py-4 text-sm text-slate-600 leading-relaxed border-t border-slate-100 bg-white">
+            Testamentos, declaratoria de herederos, poderes notariales, separación convencional y divorcio ulterior.
+        </div>
+    </details>
+
+    <details className="group rounded-lg border border-slate-200 overflow-hidden">
+        <summary className="flex items-center justify-between px-5 py-4 cursor-pointer bg-slate-50 hover:bg-amber-50 transition-colors font-medium text-slate-700 list-none">
+            <span>🏢 Actos societarios y empresariales</span>
+            <span className="text-slate-400 group-open:rotate-180 transition-transform text-sm">▼</span>
+        </summary>
+        <div className="px-5 py-4 text-sm text-slate-600 leading-relaxed border-t border-slate-100 bg-white">
+            Constitución de sociedades, modificación de estatutos, poderes para actos empresariales y disolución.
+        </div>
+    </details>
+
+    <details className="group rounded-lg border border-slate-200 overflow-hidden">
+        <summary className="flex items-center justify-between px-5 py-4 cursor-pointer bg-slate-50 hover:bg-amber-50 transition-colors font-medium text-slate-700 list-none">
+            <span>✍️ Certificaciones y autenticaciones</span>
+            <span className="text-slate-400 group-open:rotate-180 transition-transform text-sm">▼</span>
+        </summary>
+        <div className="px-5 py-4 text-sm text-slate-600 leading-relaxed border-t border-slate-100 bg-white">
+            Legalización de firmas, certificación de copias, constatación de supervivencia y autenticación para uso en el extranjero (apostilla).
+        </div>
+    </details>
+</div>
+
+---
+
+## Cómo usar esta documentación
+
+> **Nota:** Esta guía es de carácter informativo y orientativo. Para casos con implicancias legales específicas, siempre consulta directamente con un notario público colegiado.
+
+Cada sección de proceso sigue una estructura consistente:
+
+1. **Descripción del acto** — qué es y cuándo se necesita
+2. **Base legal** — norma que lo regula
+3. **Requisitos documentales** — lista descargable
+4. **Flujo del procedimiento** — diagrama y pasos ordenados
+5. **Costos estimados y plazos** — rangos referenciales
+6. **Preguntas frecuentes** — casos de duda comunes
+
+<div className="mt-10 flex flex-col sm:flex-row gap-4">
+    <a href="/procesos"
+       className="inline-flex items-center justify-center gap-2 rounded-lg bg-amber-500 hover:bg-amber-600 text-white font-semibold px-6 py-3 text-sm transition-colors shadow-sm no-underline">
+        Ver todos los procesos →
+    </a>
+    <a href="/glosario"
+       className="inline-flex items-center justify-center gap-2 rounded-lg border border-slate-300 hover:border-amber-400 text-slate-700 hover:text-amber-700 font-semibold px-6 py-3 text-sm transition-colors no-underline">
+        Glosario notarial
+    </a>
+</div>
+
+---
+
+<div className="mt-8 text-xs text-slate-400 text-center">
+    Documentación mantenida conforme al <strong>D.Leg. N.° 1049</strong> — Decreto del Notariado Peruano · Última revisión: 2025
 </div>
