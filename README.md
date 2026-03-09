@@ -8,3 +8,4 @@ Pequeño acercamiento a buscador de paginas de notarias.
 - Actualmente el build ya hace la conversión de mdx a html, el segundo workflow solo debe desplegar no convertir. [-]
 - Configurar scripts de builds para generar más htmls.
 - Convertir MDX a react.
+- Agregar eslint.
