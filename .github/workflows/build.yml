@@ -34,7 +34,7 @@ jobs:
         run: pnpm install
 
       - name: Ejecutar script de build
-        run: node scripts/build.mjs
+        run: pnpm run build
 
       - name: Publicar cambios en /docs
         run: |
