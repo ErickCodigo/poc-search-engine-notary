@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [{ enforce: 'pre', ...mdx() }, react({ include: /\.(jsx|js|mdx|md|tsx|ts)$/, })],
   build: {
-    outDir: './docs',
+    outDir: './docs/scripts',
     emptyOutDir: false,
     // Especificamos que el formato de salida sea ES Modules
     modulePreload: true,
