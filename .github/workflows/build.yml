@@ -49,7 +49,7 @@ jobs:
           CHANGED=$?
           set -e  # La reactiva para el resto del script
           if [ $CHANGED -eq 1 ]; then
-            git commit -m "chore: actualizar index.html generado"
-            git push
+            git commit -m "chore: actualizar index.html generado" > /dev/null
+            git push > /dev/null
           fi
           echo "Status $CHANGED"
