@@ -32,9 +32,7 @@ jobs:
       - name: Checkout only docs
         uses: actions/checkout@v4
         with:
-          sparse-checkout: |
-            docs
-          sparse-checkout-cone-mode: false
+          sparse-checkout: docs
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
