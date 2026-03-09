@@ -43,5 +43,4 @@ jobs:
           git add docs/index.html
           git add docs/scripts/vendor.js
           git add docs/scripts/app.js
-          git diff --staged --quiet; CHANGED=$?; [ $CHANGED -eq 1 ] && git commit -m "chore: actualizar index.html generado" > /dev/null; echo $CHANGED
-          git push
+          git diff --staged --quiet; CHANGED=$?; [ $CHANGED -eq 1 ] && (git commit -m "chore: actualizar index.html generado" && git push) > /dev/null; echo $CHANGED
