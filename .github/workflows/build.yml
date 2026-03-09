@@ -47,7 +47,7 @@ jobs:
           git diff --staged --quiet
           CHANGED=$?
           set -e  # La reactiva para el resto del script
-          if [ $STATUS -eq 1 ]; then
+          if [ $CHANGED -eq 1 ]; then
             git commit -m "chore: actualizar index.html generado"
             git push
           fi
