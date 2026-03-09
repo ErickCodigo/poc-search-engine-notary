@@ -1,11 +1,12 @@
 import { defineConfig } from 'vite';
 import mdx from '@mdx-js/rollup';
 import react from '@vitejs/plugin-react';
+import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  plugins: [{ enforce: 'pre', ...mdx() }, react({ include: /\.(jsx|js|mdx|md|tsx|ts)$/, })],
+  plugins: [{ enforce: 'pre', ...mdx() }, react({ include: /\.(jsx|js|mdx|md|tsx|ts)$/, }), tailwindcss()],
   build: {
-    outDir: './docs/scripts',
+    outDir: 'docs',
     emptyOutDir: false,
     // Especificamos que el formato de salida sea ES Modules
     modulePreload: true,
@@ -18,8 +19,9 @@ export default defineConfig({
         manualChunks: {
           vendor: ['react', 'react-dom'],
         },
-        entryFileNames: '[name].js',
-        chunkFileNames: '[name].js',
+        entryFileNames: 'scripts/[name].js',
+        chunkFileNames: 'scripts/[name].js',
+        assetFileNames: 'assets/[name].[ext]',
       },
     },
   },

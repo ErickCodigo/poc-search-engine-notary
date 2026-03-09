@@ -43,6 +43,7 @@ jobs:
           git add docs/index.html
           git add docs/scripts/vendor.js
           git add docs/scripts/app.js
+          git add docs/assets/app.css
           set +e  # Desactiva la detención automática por errores
           git diff --staged --quiet
           CHANGED=$?
